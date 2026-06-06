@@ -1,0 +1,22 @@
+{
+    "terminal.integrated.env.osx": {
+        "PATH": "${env:HOME}/.cargo/bin:${env:PATH}"
+    },
+    "terminal.integrated.env.linux": {
+        "PATH": "${env:HOME}/.cargo/bin:${env:PATH}"
+    },
+    "rust-analyzer.runnables.command": "${env:HOME}/.cargo/bin/cargo",
+    // Lưu bài LeetCode vào project này
+    "leetcode.workspaceFolder": "${workspaceFolder}",
+    "leetcode.defaultLanguage": "rust",
+    // Mỗi bài -> src/solutions/p<id>_<ten_snake>.rs (tên hợp lệ làm module Rust)
+    "leetcode.filePath": {
+        "default": {
+            "folder": "src/solutions",
+            "filename": "p${id}_${snake_case_name}.${ext}"
+        }
+    },
+    "cSpell.words": [
+        "strs"
+    ]
+}

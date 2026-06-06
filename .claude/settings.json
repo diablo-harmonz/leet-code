@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rustc --version)",
+      "Bash(cargo --version)",
+      "Bash(cargo check *)",
+      "Bash(cargo build *)",
+      "Bash(cargo test *)",
+      "Bash(node -e ' *)",
+      "Bash(ls MEMORY.md)"
+    ]
+  }
+}

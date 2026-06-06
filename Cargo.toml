@@ -1,0 +1,11 @@
+[package]
+name = "leetcode"
+version = "0.1.0"
+edition = "2024"
+# build.rs tự sinh danh sách module từ src/solutions/*.rs
+build = "build.rs"
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
