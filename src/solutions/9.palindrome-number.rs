@@ -15,14 +15,15 @@ impl Solution {
             return false;
         }
 
-        let mut root_num = x;
-        let mut reserved_num = 0;
-        while (root_num > reserved_num) {
-            reserved_num = (reserved_num * 10) + (root_num % 10);
-            root_num /= 10;
+        let mut root_number: i32 = x;
+        let mut reserved_number: i32 = 0;
+
+        while root_number > reserved_number {
+            reserved_number = reserved_number * 10 + (root_number % 10);
+            root_number /= 10;
         }
 
-        root_num == reserved_num || root_num == (reserved_num / 10)
+        reserved_number == root_number || root_number == (reserved_number / 10)
     }
 }
 // @lc code=end

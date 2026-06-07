@@ -10,7 +10,7 @@ struct Solution;
 
 // @lc code=start
 impl Solution {
-    fn char_to_val(c: char) -> i32 {
+    fn roman_dictionary(c: char) -> i32 {
         match c {
             'I' => 1,
             'V' => 5,
@@ -19,17 +19,17 @@ impl Solution {
             'C' => 100,
             'D' => 500,
             'M' => 1000,
-            _ => 0
+            _ => 0,
         }
     }
-
     pub fn roman_to_int(s: String) -> i32 {
-        let chars: Vec<char> = s.chars().collect();
-        let mut total = 0;
-        for i in 0..chars.len() {
-            let current = Self::char_to_val(chars[i]);
-            let next = if i + 1 < chars.len() {
-                Self::char_to_val(chars[i + 1])
+        let roman_char: Vec<char> = s.chars().collect();
+        let mut total: i32 = 0;
+
+        for i in 0..roman_char.len() {
+            let current: i32 = Self::roman_dictionary(roman_char[i]);
+            let next: i32 = if i + 1 < roman_char.len() {
+                Self::roman_dictionary(roman_char[i + 1])
             } else {
                 0
             };
@@ -40,6 +40,7 @@ impl Solution {
                 total += current;
             }
         }
+
         total
     }
 }
